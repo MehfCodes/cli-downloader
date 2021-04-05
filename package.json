@@ -1,0 +1,24 @@
+{
+  "name": "cli-app",
+  "version": "1.0.0",
+  "bin": {
+    "cli-app": "index.js"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "listr": "^0.14.3",
+    "node-fetch": "^2.6.1",
+    "ytdl-core": "^4.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
