@@ -1,24 +1,34 @@
 {
-  "name": "cli-app",
+  "name": "cli-downloader",
   "version": "1.0.0",
   "bin": {
     "cli-app": "index.js"
   },
-  "description": "",
+  "description": "A CLI tool for download images,videos,web pages,etc except youtube videos",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "author": "",
+  "author": "MehfCodes",
   "license": "ISC",
-  "dependencies": {
-    "axios": "^0.21.1",
-    "express": "^4.17.1",
-    "listr": "^0.14.3",
-    "node-fetch": "^2.6.1",
-    "ytdl-core": "^4.5.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MehfCodes/cli-downloader"
   },
+  "homepage": "https://github.com/MehfCodes/cli-downloader#readme",
+  "bugs": {
+    "url": "https://github.com/MehfCodes/cli-downloader/issues"
+  },
+  "dependencies": {},
   "devDependencies": {
     "nodemon": "^2.0.7"
-  }
+  },
+  "keywords": [
+    "cli",
+    "download",
+    "downloader",
+    "cli-downloader",
+    "cli downloader"
+  ]
 }
