@@ -2,7 +2,7 @@
   "name": "cli-downloader",
   "version": "1.0.0",
   "bin": {
-    "cli-app": "index.js"
+    "cli-downloader": "index.js"
   },
   "description": "A CLI tool for download images,videos,web pages,etc except youtube videos",
   "main": "index.js",
