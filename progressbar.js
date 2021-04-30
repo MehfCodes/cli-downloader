@@ -42,27 +42,32 @@ class ProgressBar {
     rdl.cursorTo(process.stdout, this.cursor);
   }
   showProgressBar() {
+    this.showPercentage();
     const points = Array.from(
       { length: this.progressBarWidth + 1 },
       (v, i) => i * 5
     );
 
-    if (parseInt(this.calcutePercentage()) === points[this.cursor]) {
-      this.showPercentage();
+    // if (parseInt(this.calcutePercentage()) >= points[this.cursor]) {
+    let currentBars = Math.floor(parseInt(this.calcutePercentage()) / 5);
+    let nextSteps = currentBars - this.cursor;
+    for (let i = 0; i < nextSteps; i++) {
       process.stdout.write('\x1b[47m');
       process.stdout.write('\x1b[8m');
       rl.write('\u2588');
       process.stdout.write('\x1b[0m');
       this.cursor++;
-      if (this.cursor > this.progressBarWidth) {
-        process.stdout.write('\x1B[?25h');
-        process.stdout.clearLine();
-        rdl.cursorTo(process.stdout, 0);
-        process.stdout.write('download finished');
-        rl.close();
-        return;
-      }
     }
+
+    if (this.cursor >= this.progressBarWidth) {
+      process.stdout.write('\x1B[?25h');
+      process.stdout.clearLine();
+      rdl.cursorTo(process.stdout, 0);
+      process.stdout.write('download finished');
+      rl.close();
+      return;
+    }
+    // }
   }
 }
 
